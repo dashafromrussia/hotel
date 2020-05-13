@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Отель в горах</title>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+        <link rel="shortcut icon" href="icon.png" type="image/png">
+    </head>
+    <body>
+        <div class="top_menu_wrapper">
+            <div class="mobile_menu_background">
+                <div class="mobile_menu_wrapper" id="menuButton">
+                    <span class="mobile_menu_icon"></span>
+                    <span class="mobile_menu_text">Меню</span>
+                </div>
+            </div>  
+            <div class="menu_container" id="menuContainer">
+                <ul class="menu">
+                    <li class="menu_item" id="elementOne"><a href="#about">Об отеле</a></li>
+                    <li class="menu_item" id="elementTwo"><a href="#app">Приложение</a></li>
+                    <li class="menu_item" id="elementThree"><a href="#feedbacks">Отзывы</a></li>
+                    <li class="menu_item" id="elementFour"><a href="#sub">Подписка</a></li>
+                    <li class="menu_item" id="elementFive"><a href="#gallery">Галерея</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="promo_wrapper" id="promoWrapper">
+            <div class="promo_container">
+                <div class="selly"><img src="images/selly.png"></div>
+                <h1 class="promo_title" id="promoTitle">
+                К услугам гостей Отеля зона СПА <br> и банкетный зал по системе «Все включено».
+                </h1>
+                <p class="promo_subtitle">
+                Наш отель развеет привычное понимание о стандартных гостиницах, как местах <br> для временного проживания, и
+                позволит каждому посетителю почувствовать <br> располагающую, домашнюю атмосферу тепла и уюта.
+                </p>
+                <div class="buttons">
+                    <button class="find_room" id="subscribePopupButton">НАЙТИ НОМЕР</button>
+                    <button class="show_video" id="showVideoButton">СМОТРЕТЬ ВИДЕО</button>
+                </div>
+            </div>
+        </div>
+        <button class="slidebutton" id="slideButton"></button>
+        <button class="slidebutton_one" id="slideButtonOne"></button>
+        <button class="slidebutton_two" id="slideButtonTwo"></button>
+        <div class="scroll_up_arrow" id="scrollUpArrow"></div>
+        <!--Modal window -->
+        <div class="overlay" id="overlay"></div>
+        <div class="popup_wrapper" id="popupWindow">
+            <div class="popup">
+                <div class="close_button" id="closeButton"></div>
+                <h2 class="popup_title">Найти номер</h2>
+                <form id="subscribeForm">
+                    <input class="name" type="name" name="name" placeholder="Введите Ваше имя">
+                    <input id="emailField" class="email" type="email" name="email" placeholder="Введите email">
+                    <select class="rooms" name="room">
+                        <option value="double_room" class="room">2-местный номер</option>
+                        <option value="triple_room" class="room">3-местный номер</option>
+                        <option value="quadruple_room" class="room">4-местный номер</option>
+                    </select>
+                    <div class="views">
+                        <div><input type="radio" value="sea" name="view" class="view"><label class="radio">С видом на море</label></div>
+                        <div><input type="radio" value="mountains" name="view" class="view"><label class="radio">С видом на горы</label></div>
+                    </div>
+                    <div class="date">Когда хотите отдохнуть?
+                        <div><input type="date" id="first"><label class="data">С какого числа</label></div>
+                        <div><input type="date" id="last"><label class="data">До какого числа</label></div>
+                    </div>
+                    <button class="buttonsub" type="submit">Забронировать</button>
+                </form>
+            </div>
+        </div>
+        <!-- End of modal window -->
+        <div class="overlay"></div>
+        <div class="popup_wrapper_video" id="popupWindowVideo">
+            <div class="popup_video">
+                <div class="close_button_video" id="closeButtonVideo"></div>
+                <video controls="controls">
+                    <source src="images/whala.mp4">
+                </video> 
+            </div>
+        </div> 
+        <!-- End video modal window-->
+        <div class = "tabs">
+            <div class="num active">История</div>
+            <div class="num">Развлечения</div>
+            <div class="num">Местность</div>
+            <div class="selecto">
+                <p class="tab_text">Доминикана прошла типичный путь для центральноамериканской страны: колония, героически завоевавшая независимость, оказалась под властью одиозного диктатора и под подавляющим влиянием США.<br> Впрочем, она же показала вдохновляющий пример того, что «банановые республики» не обречены оставаться такими всегда: преодолев за последние два десятилетия наследие авторитаризма, гражданских войн и нищеты, Доминикана стала одной из самых благополучных стран Карибского бассейна. 
+                </p>
+            </div>
+            <div class="selecto">
+                <p class="tab_text">
+                    Mangu - Мангу (Баваро)<br>
+                    Клуб является частью отеля Occidental Grand в Пунта-Кане. Если вы остановились здесь, то посещение заведения будет для вас бесплатным. Если нет, то вам придется заплатить за вход (в районе 10$).<br> Клуб вмещает около тысячи человек и состоит из двух этажей. На первом этаже играет музыка в стиле латино и хип хоп, а на втором господствует техно-хаус. В клубе можно заказать еду и напитки. До Мангу можно добраться на такси или заказать трансфер в Два Банана.
+                </p>
+            </div>
+            <div class="selecto">
+                <p class="tab_text">
+                    Удивительно, но в современном мире, где путешествовать так легко, далеко не все знают, где находится Доминиканская республика.<br>
+                    Доминикана идеально расположена между теплыми водами Карибского моря и прохладными течениями Атлантического океана. Эти условия создают в стране неповторимый климат и потрясающий пейзаж с теплыми Карибскими ветрами у побережья и тропическими дождями в горах в центре страны
+                </p>
+            </div>
+        </div>
+        <div class="about_hotel" id="about">
+            <h3 class="high_design">РОСКОШНЫЙ ДИЗАЙН</h3>
+            <p class="article_text">
+            Неповторимые дизайнерские задумки в интерьере отеля, которые вы можете посмотреть на официальном сайте, помогли
+            удачно сочетать классику, уникальную ковку ручной работы и лепку.
+            </p>
+            <p class="article_text_one">
+            Комфортные диваны из натуральной кожи, а также стильные полы из мрамора лишь подчеркивают всю изысканность Гранд
+            Отель Аристократ. Еще богаче здание смотрится поздним вечером, когда подсветка гостиницы так и манит, будто
+            призывая вас заглянуть в свое изысканное убранство. К вашим услугам:
+            </p>
+            <ul class="article_menu">
+                <li class="article_menu_item">роскошная зона СПА</li>
+                <li class="article_menu_item">банкетный зал</li>
+                <li class="article_menu_item">конференц зал</li>
+                <li class="article_menu_item">дневное посещение</li>
+                <li class="article_menu_item">проживание по системе “Все включено”</li>
+            </ul>
+            <p class="article_text_two">
+            Удачное расположение перенесет вас в атмосферу лесного массива. Вы сможете наслаждаться прекрасными птичьими
+            трелями, а не слушать звуки машин. Такая обстановка, как нельзя лучше, будут дополнять спокойствие и
+            размеренность этого прекрасного местечка. Забронировать номер в нашей гостинице можно прямо на официальном
+            сайте.
+            </p>
+            <div class="telephone" id="app">
+                <div class="app">
+                    <h4 class="app_head">УДОБНОЕ<br>ПРИЛОЖЕНИЕ</h4>
+                    <div class="icon_android"><img src="images/android-icon.png"></div>
+                    <div class="icon_apple"><img src="images/apple-icon.png"></div>
+                    <p class="article_text_three">
+                    В нашем приложении Вы найдете фото отеля,отзывы постояльцев и узнаете о последних акциях.
+                    </p>
+                </div>
+                <div class="phone_foto"><img src="images/phone-app.png"></div>
+            </div>
+            <div class="allfeedbacks" id="feedbacks">
+                <h5 class="feedbacks_head">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h5>
+                <div class="feedbacks_visible">
+                    <div class="feedback">
+                        <div class="photo_people"><img src="images/photo_one.jpg"></div>
+                        <p class="name_people">ЕКАТЕРИНА</p>
+                        <p class="speak_about">В это волшебное место хочется возвращаться снова и снова.</p>
+                    </div>
+                    <div class="feedback">
+                        <div class="photo_people"><img src="images/photo_two.jpg"></div>
+                        <p class="name_people">ВОЛЬДЕМАР</p>
+                        <p class="speak_about">Я искал тихое место для отдыха, и отель меня не разочаровал.</p>
+                    </div>
+                    <div class="feedback">
+                        <div class="photo_people"><img src="images/photo_three.jpg"></div>
+                        <p class="name_people">ИКЕР</p>
+                        <p class="speak_about">Здорово, что на отдых можно взять любимую собаку.</p>
+                    </div>
+                </div>
+                <button class="show_all" id="showAll">Все отзывы</button>
+                <div class="feedbacks_hidden" id="feedBack">
+                    <div class="feedback">
+                        <div class="photo_people"><img src="images/photo_four.jpg"></div>
+                        <p class="name_people">ДОМИНИКА</p>
+                        <p class="speak_about">Шикарное место для отдыха с детьми. Мы рады!</p>
+                    </div>
+                    <div class="feedback">
+                        <div class="photo_people"><img src="images/photo_five.jpg"></div>
+                        <p class="name_people">АНАСТЕЙША</p>
+                        <p class="speak_about">Это настоящий рай для мужчин! Охота и рыбалка включены!</p>
+                    </div>
+                    <div class="feedback">
+                        <div class="photo_people"><img src="images/photo_six.jpg"></div>
+                        <p class="name_people">ИЛЛАРИОН</p>
+                        <p class="speak_about">Прекрасный вид на горы покорил моё сердце!</p>
+                    </div>
+                </div>
+                <div class="direction_back" id="directionBack"><img src="images/924_oooo.plus.png"></div>
+            </div>
+        </div>
+        <div class="follow_us">
+            <h6 class="follow_head">Подпишитесь на нас и будьте в курсе новостей!</h6>
+            <form class="form_two" id="sub">
+                <input class="name_two" type="name" name="name_two" placeholder="Введите Ваше имя">
+                <input id="emailFieldTwo" class="email_two" type="email" name="email_two" placeholder="Введите email">
+                <button class="button_two" type="submit">Подписаться</button>
+            </form>
+        </div>
+        <div class="gallery" id="gallery">
+            <div class="gallery_content"> 
+                <h7 class="gallery_head">НАСЛАДИТЕСЬ ПРЕКРАСНЫМИ ВИДАМИ СО СКАЛЫ НАШЕГО ОТЕЛЯ!ВЫ НЕ ОСТАНЕТЕСЬ РАВНОДУШНЫМИ!</h7>
+                <div class="galery2">
+                    <img  src="images/gallery/IMG_1.JPG" name="one">
+                    <img  src="images/gallery/IMG_2.JPG" name="two">
+                    <img  src="images/gallery/IMG_3.JPG" name="three">
+                    <img  src="images/gallery/IMG_4.JPG" name="four">
+                    <img  src="images/gallery/IMG_5.JPG" name="five">
+                    <img  src="images/gallery/IMG_6.JPG" name="six">
+                    <img  src="images/gallery/IMG_7.JPG" name="seven">
+                    <img  src="images/gallery/IMG_8.JPG" name="eight">
+                    <img  src="images/gallery/IMG_9.JPG" name="nine">
+                    <img  src="images/gallery/IMG_10.JPG" name="ten">
+                    <img  src="images/gallery/IMG_11.JPG" name="eleven">
+                    <img  src="images/gallery/IMG_12.JPG" name="twelve">
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <div class="popup_wrapperg" id="popupWindowG">
+        <div class="popup_galery">
+            <div class="close_button" id="closeButtonG"></div>
+            <div id="next"></div>
+            <div id="pre"></div>
+            <div class="galery1">
+                <img class="image" src="images/gallery/IMG_1.JPG" name="one">
+                <img class="image" src="images/gallery/IMG_2.JPG" name="two">
+                <img class="image" src="images/gallery/IMG_3.JPG" name="three">
+                <img class="image" src="images/gallery/IMG_4.JPG" name="four">
+                <img class="image" src="images/gallery/IMG_5.JPG" name="five">
+                <img class="image" src="images/gallery/IMG_6.JPG" name="six">
+                <img class="image" src="images/gallery/IMG_7.JPG" name="seven">
+                <img class="image" src="images/gallery/IMG_8.JPG" name="eight">
+                <img class="image" src="images/gallery/IMG_9.JPG" name="nine">
+                <img class="image" src="images/gallery/IMG_10.JPG" name="ten">
+                <img class="image" src="images/gallery/IMG_11.JPG" name="eleven">
+                <img class="image" src="images/gallery/IMG_12.JPG" name="twelve"> 
+            </div>
+         </div>
+     </div>
+     <div class="map">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30293.962120500502!2d-69.02626290621926!3d18.358902231589507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea5f8a9e951fcaf%3A0x3561c0153d175a55!2z0JrQsNGC0LDQu9C40L3QsA!5e0!3m2!1sru!2sru!4v1585569182821!5m2!1sru!2sru" width="100%" height="650" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe>
+    </div>
+    <script src="js/ajax.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
